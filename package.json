@@ -1,0 +1,65 @@
+{
+  "author": "Jacco Meijer <jacco@jaccomeijer.nl> (https://www.jaccomeijer.nl)",
+  "bugs": {
+    "url": "https://github.com/jaccomeijer/wheelroom/issues"
+  },
+  "dependencies": {
+    "@emotion/core": "10.0.14",
+    "@jacco-meijer/styled-system": "^2.0.3",
+    "@jacco-meijer/wheelroom-plugin-contentful": "^1.1.1",
+    "camelcase": "5.3.1",
+    "react-docgen-typescript": "1.12.5",
+    "react-helmet": "5.2.1"
+  },
+  "description": "Content models to be used with @jacco-meijer/wheelroom and gatsby-theme-wheelroom",
+  "devDependencies": {
+    "@types/jest": "24.0.15",
+    "@types/node": "12.6.3",
+    "@types/react": "16.8.23",
+    "@types/react-dom": "16.8.4",
+    "@types/react-helmet": "5.0.8",
+    "jest": "24.8.0",
+    "npm-install-peers": "1.2.1",
+    "npm-run-all": "4.1.5",
+    "prettier": "1.18.2",
+    "ts-jest": "24.0.2",
+    "tslint": "5.18.0",
+    "tslint-config-prettier": "1.18.0",
+    "tslint-loader": "3.5.4",
+    "tslint-plugin-prettier": "2.0.1",
+    "tslint-react": "4.0.0",
+    "typescript": "3.5.3"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "files": [
+    "dist/*"
+  ],
+  "license": "MIT",
+  "main": "dist/index.js",
+  "name": "@richyte/content-models",
+  "peerDependencies": {
+    "@emotion/core": "10.x",
+    "react": "16.x",
+    "react-dom": "16.x"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Richyte/content-models.git"
+  },
+  "scripts": {
+    "build": "npm-run-all build:*",
+    "build:clean": "rm -rf ./dist",
+    "build:compile": "tsc",
+    "build:lint": "tslint --project tsconfig.json",
+    "build:test": "jest",
+    "install-peers": "npm-install-peers",
+    "prepack": "npm run build"
+  },
+  "types": "dist/index.d.ts",
+  "version": "2.1.4"
+}
